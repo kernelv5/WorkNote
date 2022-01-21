@@ -9,7 +9,6 @@ cd /data/jenkins/workspace/BCT-CEP-STAGING-DEPLOY/cep/terraform/.terraform/modul
 zip -r package-aws.zip *
 chown jenkins. package-aws.zip
 
-
 Vault Data Check ====
 
 pname=TXN-LST
