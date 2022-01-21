@@ -9,9 +9,6 @@ https://gitlab.com/_bcgroup/infra/platform/-/merge_requests/671
 3.interest rate calc service = ircs 7420
 
 
-
-
-
 123 -> Egress Kafka
 23 -> ledger
 1 - platform api
