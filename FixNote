@@ -1,0 +1,19 @@
+Jenkins FunctionBeat Fixes
+
+cd /data/jenkins/workspace/BCT-CEP-STAGING-DEPLOY/cep/terraform/.terraform/modules/ecs-lms-zodia-log_stream/functionbeat/files
+zip -r package-aws.zip *
+chown jenkins. package-aws.zip
+
+
+cd /data/jenkins/workspace/BCT-CEP-STAGING-DEPLOY/cep/terraform/.terraform/modules/ecs-lms-zodia-ui-log_steam/functionbeat/files
+zip -r package-aws.zip *
+chown jenkins. package-aws.zip
+
+
+Vault Data Check ====
+
+pname=TXN-LST
+file=osl-rfs
+export VAULT_ADDRESS='http://vault.vault.local:8200'
+export TOKEN=$(curl -s $VAULT_ADDRESS/tokens/$pname)
+curl -s -H "X-Vault-token: $TOKEN" $VAULT_ADDRESS/v1/secret/data/$pname/$file

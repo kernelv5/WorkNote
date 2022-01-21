@@ -1,0 +1,5 @@
+1. Make Sure the ports are registered
+https://bctechnology.atlassian.net/wiki/spaces/DEVOPS/pages/2001338386/Services+listening+ports
+
+2. Make Sure port range covers ( If required from web )
+https://gitlab.com/_bcgroup/dryver/legacy-platform/packer-terraform/-/blob/oat/platform/terraform/oat/nucleus.tf#L93-94

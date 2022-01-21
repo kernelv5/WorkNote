@@ -1,0 +1,52 @@
+SG Port Range
+Merged : https://gitlab.com/_bcgroup/dryver/legacy-platform/packer-terraform/-/merge_requests/759
+https://gitlab.com/_bcgroup/infra/platform/-/merge_requests/671
+
+
+
+1.liquidation_service = ls 7422
+2.loan position service = lps 7421
+3.interest rate calc service = ircs 7420
+
+
+
+
+
+123 -> Egress Kafka
+23 -> ledger
+1 - platform api
+
+pre-deal - Incomming -> 2
+mds -> infommong - 123
+
+
+epositories = {
+  "ircs" = {
+    "arn" = "arn:aws:ecr:ap-southeast-1:977807541405:repository/brok/mt/ircs"
+    "id" = "brok/mt/ircs"
+    "name" = "brok/mt/ircs"
+    "registry_id" = "977807541405"
+    "repository_url" = "977807541405.dkr.ecr.ap-southeast-1.amazonaws.com/brok/mt/ircs"
+  }
+  "lps" = {
+    "arn" = "arn:aws:ecr:ap-southeast-1:977807541405:repository/brok/mt/lps"
+    "id" = "brok/mt/lps"
+    "name" = "brok/mt/lps"
+    "registry_id" = "977807541405"
+    "repository_url" = "977807541405.dkr.ecr.ap-southeast-1.amazonaws.com/brok/mt/lps"
+  }
+  "ls" = {
+    "arn" = "arn:aws:ecr:ap-southeast-1:977807541405:repository/brok/mt/ls"
+    "id" = "brok/mt/ls"
+    "name" = "brok/mt/ls"
+    "registry_id" = "977807541405"
+    "repository_url" = "977807541405.dkr.ecr.ap-southeast-1.amazonaws.com/brok/mt/ls"
+  }
+}
+
+
+"977807541405.dkr.ecr.ap-southeast-1.amazonaws.com/
+${local.vertical}/
+${local.project_name}/
+${local.service_name}:
+${local.service_version}"
